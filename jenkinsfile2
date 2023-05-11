@@ -25,9 +25,19 @@ pipeline {
                   }
                }   
                
-        stage('regression test') {
+       stage('regression test') {
               steps {
-                  echo 'regression test'
+                  parallel(
+                      chrome :{
+                      echo 'running script in chrome'
+                      },
+                      firefox :{
+                      echo 'running script in firefox'
+                      },
+                      opera: {
+                      echo 'running script in opera'
+                      }
+                      )
                   }
                }  
                
