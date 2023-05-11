@@ -7,7 +7,7 @@ pipeline {
                   }
                }
            }
-      }
+      
 
 post {
 
@@ -39,4 +39,6 @@ post {
         echo 'only if status changed from success to failure or vice versa'
 
         }
+}
+
 }
