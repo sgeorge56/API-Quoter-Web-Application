@@ -1,5 +1,7 @@
 pipeline {
-     agent any
+     agent {
+     label 'ubuntuNode1'
+     }
      
 
 
@@ -9,13 +11,13 @@ pipeline {
          fname = "Shon"
         }
               steps {
-                  echo fname
+                  sh echo fname
                   }
                }
                
          stage('unit test') {
               steps {
-                  echo fname
+                  sh echo fname
                   }
                }
                
