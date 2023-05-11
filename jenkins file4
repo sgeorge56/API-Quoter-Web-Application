@@ -1,0 +1,28 @@
+pipeline {
+     agent any
+     environment{
+         fname = "kamal"
+        }
+
+
+        stages{
+          stage('build') {
+              steps {
+                  echo '$(fname)'
+                  }
+               }
+               
+         stage('unit test') {
+              steps {
+                  echo '$(fname)'
+                  }
+               }
+               
+         stage('deploy') {
+              steps {
+                  echo 'deploy'
+                  }
+               }   
+               
+    
+      }
