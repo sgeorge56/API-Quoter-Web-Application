@@ -1,10 +1,63 @@
 pipeline {
      agent any
      stages {
-         stage('build') {
+         stage('pre-build') {
               steps {
-                  echo 'hello team'
+                  echo 'prebuild'
                   }
                }
+               
+         stage('build') {
+              steps {
+                  echo 'build'
+                  }
+               }
+               
+         stage('unit test') {
+              steps {
+                  echo 'unit test'
+                  }
+               }
+               
+         stage('deploy') {
+              steps {
+                  echo 'deploy'
+                  }
+               }   
+               
+       stage('regression test') {
+              steps {
+                  parallel(
+                      chrome :{
+                      echo 'running script in chrome'
+                      },
+                      firefox :{
+                      echo 'running script in firefox'
+                      },
+                      opera: {
+                      echo 'running script in opera'
+                      }
+                      )
+                  }
+               }  
+               
+        stage('release to prod') {
+              steps {
+                  echo 'release to prod'
+                  }
+               }  
            }
-      }
+      
+
+post {
+
+    always {
+
+
+        echo 'cleanup after everything'
+       }
+
+    
+}
+
+}
