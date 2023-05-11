@@ -1,10 +1,7 @@
 pipeline {
      agent any
 
-     options{
-         retry(3)
-
-         }
+     
      environment{
          fname = "kamal"
         }
@@ -12,6 +9,10 @@ pipeline {
 
         stages{
           stage('build') {
+          options{
+         retry(3)
+
+         }
               steps {
                   error ('error')
                   }
