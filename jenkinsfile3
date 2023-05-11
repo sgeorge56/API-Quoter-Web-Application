@@ -10,7 +10,7 @@ pipeline {
                           echo 'this is inner 1'}
                       }
                   }
-               }
+               }}
              
                
          stage('build') {
