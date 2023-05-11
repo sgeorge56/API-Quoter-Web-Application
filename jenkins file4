@@ -1,13 +1,13 @@
 pipeline {
      agent any
-     
+     environment{
+         fname = "Shon"
+        }
 
 
         stages{
           stage('build') {
-          environment{
-         fname = "Shon"
-        }
+         
               steps {
                   echo fname
                   }
