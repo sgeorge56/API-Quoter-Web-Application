@@ -1,11 +1,41 @@
 pipeline {
      agent any
      stages {
-         stage('build') {
+         stage('pre-build') {
               steps {
-                  echo 'hello team'
+                  echo 'prebuild'
                   }
                }
+               
+         stage('build') {
+              steps {
+                  echo 'build'
+                  }
+               }
+               
+         stage('unit test') {
+              steps {
+                  echo 'unit test'
+                  }
+               }
+               
+         stage('deploy') {
+              steps {
+                  echo 'deploy'
+                  }
+               }   
+               
+        stage('regression test') {
+              steps {
+                  echo 'regression test'
+                  }
+               }  
+               
+        stage('release to prod') {
+              steps {
+                  echo 'release to prod'
+                  }
+               }  
            }
       
 
@@ -14,7 +44,7 @@ post {
     always {
 
 
-        echo 'Always'
+        echo 'cleanup after everything'
        }
 
     
