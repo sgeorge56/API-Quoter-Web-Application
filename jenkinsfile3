@@ -1,15 +1,15 @@
 pipeline {
-     agent any
+     agent any }
      stages {
          stage('pre-build') {
               stages{
-                  stage{
-                      steps('inner1'){
+                  stage('inner1'){
+                      steps{
                           echo 'this is inner 1'}
                       }
                   }
                }
-               }
+             
                
          stage('build') {
               steps {
@@ -32,15 +32,3 @@ pipeline {
     
       
 
-post {
-
-    always {
-
-
-        echo 'cleanup after everything'
-       }
-
-    
-}
-
-}
