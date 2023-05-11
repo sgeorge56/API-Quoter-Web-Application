@@ -1,5 +1,7 @@
 pipeline {
-     agent any }
+     agent {
+     label "ubuntu'
+     }
      stages {
          stage('pre-build') {
               stages{
@@ -27,7 +29,8 @@ pipeline {
               steps {
                   echo 'deploy'
                   }
-               }   
+               }  
+             }
                
     
       
