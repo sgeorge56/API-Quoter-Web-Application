@@ -17,28 +17,7 @@ post {
         echo 'Always'
        }
 
-    success {
-
-        echo "only on success"
-         
-
-        }
-
-    failure{
-        echo 'only on failure'
-        }
-
-    unstable{
-
-        echo 'only if run is unstable'
-
-        
-     }
-
-    changed{
-        echo 'only if status changed from success to failure or vice versa'
-
-        }
+    
 }
 
 }
