@@ -1,0 +1,33 @@
+pipeline {
+     agent any
+
+     options{
+         retry(3)
+
+         }
+     environment{
+         fname = "kamal"
+        }
+
+
+        stages{
+          stage('build') {
+              steps {
+                  echo fname
+                  }
+               }
+               
+         stage('unit test') {
+              steps {
+                  echo fname
+                  }
+               }
+               
+         stage('deploy') {
+              steps {
+                  echo 'deploy'
+                  }
+               }   
+               
+    
+      }
