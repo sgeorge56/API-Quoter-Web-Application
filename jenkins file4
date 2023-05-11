@@ -8,13 +8,13 @@ pipeline {
         stages{
           stage('build') {
               steps {
-                  echo $fname
+                  printenv fname
                   }
                }
                
          stage('unit test') {
               steps {
-                  echo $fname
+                  printenv fname
                   }
                }
                
