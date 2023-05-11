@@ -27,7 +27,7 @@ pipeline {
                
        stage('regression test') {
               
-                  parallel(
+                  parallel{
                    stage('chrome'){
                        steps {
                        echo 'running in chrome'
@@ -41,7 +41,7 @@ pipeline {
                        echo 'running in opera'
                        }
                    }
-                      )
+                      }
                   
                }  
                
