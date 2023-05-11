@@ -25,21 +25,25 @@ pipeline {
                   }
                }   
                
-       stage('regression test') {
-              steps {
+     stage('regression test') {
+              
                   parallel(
-                      chrome :{
-                      echo 'running script in chrome'
-                      },
-                      firefox :{
-                      echo 'running script in firefox'
-                      },
-                      opera: {
-                      echo 'running script in opera'
-                      }
+                   stage('chrome'){
+                       steps {
+                       echo 'running in chrome'
+                       }
+                   stage('safari'){
+                       steps {
+                       echo 'running in safari'
+                       }
+                   stage('opera'){
+                       steps {
+                       echo 'running in opera'
+                       }
+                   }
                       )
-                  }
-               }  
+                  
+               }   
                
         stage('release to prod') {
               steps {
