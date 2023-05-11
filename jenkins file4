@@ -11,13 +11,13 @@ pipeline {
          fname = "Shon"
         }
               steps {
-                  sh echo fname
+                  sh 'echo fname'
                   }
                }
                
          stage('unit test') {
               steps {
-                  sh echo fname
+                  sh 'echo fname'
                   }
                }
                
