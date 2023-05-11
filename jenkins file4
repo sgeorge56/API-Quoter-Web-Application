@@ -1,7 +1,7 @@
 pipeline {
      agent any
      environment{
-         fname = "Shon"
+         credent = credentials("cred")
         }
 
 
@@ -9,13 +9,15 @@ pipeline {
           stage('build') {
          
               steps {
-                  echo fname
+                  echo credent_USR
+                  echo credent_PSW
                   }
                }
                
          stage('unit test') {
               steps {
-                  echo fname
+                  echo credent_USR
+                  echo credent_PSW
                   }
                }
                
