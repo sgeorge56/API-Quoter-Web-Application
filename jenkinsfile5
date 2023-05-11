@@ -13,19 +13,19 @@ pipeline {
         stages{
           stage('build') {
               steps {
-                  echo fname
+                  error ('error')
                   }
                }
                
          stage('unit test') {
               steps {
-                  echo fname
+                  error ('error')
                   }
                }
                
          stage('deploy') {
               steps {
-                  echo 'deploy'
+                  error ('error')
                   }
                }   
                
