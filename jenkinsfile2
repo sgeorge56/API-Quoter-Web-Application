@@ -26,7 +26,7 @@ pipeline {
                }   
                
        stage('regression test') {
-              steps {
+              
                   parallel(
                       chrome :{
                       echo 'running script in chrome'
@@ -38,7 +38,7 @@ pipeline {
                       echo 'running script in opera'
                       }
                       )
-                  }
+                  
                }  
                
         stage('release to prod') {
