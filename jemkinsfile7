@@ -18,8 +18,8 @@ pipeline{
              }
              
             input {
-               message" deploy to production?"
-               id "simple-input"
+               message 'deploy to production?'
+               id 'simple-input'
             
             }
             }
