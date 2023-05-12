@@ -9,11 +9,12 @@ pipeline{
            steps{
            
                script{
-                   if(env.fname == "Shn"){
-                        echo 'this is in the correct position'
+                   try{
+                      sh 'abcefg'
                    }
-                   else{
-                        echo 'You are not part of this branch'
+                   
+                   catch(e){
+                       echo "Error has occured"
                    }
             }
            
