@@ -7,7 +7,7 @@ pipeline {
              steps{
                           echo 'this is inner 1'}
                       }
-                  }
+                  
                
              
                
