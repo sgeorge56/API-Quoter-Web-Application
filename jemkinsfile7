@@ -2,7 +2,7 @@ pipeline{
     agent any
     environment{
          abc = 'Hello World'
-         def = 'pass'
+         efg = 'pass'
     }
     
     stages{
@@ -12,7 +12,7 @@ pipeline{
             when {
             
                  anyof{
-                 environment name: 'def', value:'pass'
+                 environment name: 'efg', value:'pass'
                  environment name: 'abc', value: 'Hello Wrld'
              }
             }
