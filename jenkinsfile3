@@ -1,6 +1,6 @@
 pipeline {
      agent {
-     label "ubuntuNode1'
+     label 'ubuntuNode1'
      }
      stages {
          stage('pre-build') {
