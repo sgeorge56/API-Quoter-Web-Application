@@ -9,7 +9,7 @@ pipeline{
         stage('one'){
         
             when {
-                 environment name: 'abc', value: 'Hello World'
+                 environment name: 'abc', value: 'Value'
             
             }
         
