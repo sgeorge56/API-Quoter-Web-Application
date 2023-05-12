@@ -11,7 +11,7 @@ pipeline{
         
             when {
             
-                 anyof{
+                 anyOf{
                  environment name: 'efg', value:'pass'
                  environment name: 'abc', value: 'Hello Wrld'
              }
