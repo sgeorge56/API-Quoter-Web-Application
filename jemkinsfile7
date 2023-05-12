@@ -11,9 +11,9 @@ pipeline{
         
             when {
             
-                 allof{
+                 anyof{
                  environment name: 'def', value:'pass'
-                 environment name: 'abc', value: 'Hello World'
+                 environment name: 'abc', value: 'Hello Wrld'
              }
             }
         
