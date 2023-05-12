@@ -2,7 +2,7 @@ pipeline{
     agent any
     parameters{
         string(name: 'fName', defaultValue: 'Shon', description: ' ')
-        choice(name: 'City', choices: ['one', 'two', 'three'], decription: '')
+        choice(name: 'City', choices: ['one', 'two', 'three'], description: ' ')
     }
     
       stages {
