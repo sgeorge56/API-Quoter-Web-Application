@@ -4,13 +4,11 @@ pipeline {
      }
      stages {
          stage('pre-build') {
-              stages{
-                  stage('inner1'){
-                      steps{
+             steps{
                           echo 'this is inner 1'}
                       }
                   }
-               }}
+               
              
                
          stage('build') {
