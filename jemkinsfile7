@@ -11,11 +11,11 @@ pipeline{
         
             when {
             
-                 allOf{
+                 
                  environment name: 'efg', value:'pass'
                  environment name: 'abc', value: 'Hello World'
                  beforeInput true
-             }}
+             }
              
             input {
                message 'deploy to production?'
