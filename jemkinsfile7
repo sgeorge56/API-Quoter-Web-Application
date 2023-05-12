@@ -13,8 +13,15 @@ pipeline{
             
                  allOf{
                  environment name: 'efg', value:'pass'
-                 environment name: 'abc', value: 'Hello Wrld'
+                 environment name: 'abc', value: 'Hello World'
+                 beforeInput true
              }
+             
+            input {
+               message" deploy to production?"
+               id "simple-input"
+            
+            }
             }
         
             steps{
