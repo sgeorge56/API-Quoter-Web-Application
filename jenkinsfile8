@@ -9,7 +9,7 @@ pipeline{
            steps{
            
                script{
-                   if(env.fname == "Shon"){
+                   if(env.fname == "Shn"){
                         echo 'this is in the correct position'
                    }
                    else{
