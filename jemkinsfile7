@@ -1,0 +1,42 @@
+pipeline{
+    agent any
+    enironment{
+         abc = 'Hello World'
+    }
+    
+    stages{
+    
+        stage('one'){
+        
+            when {
+                 environment name: 'abc', value: 'Hello World'
+            
+            }
+        
+            steps{
+                echo 'Value has been passed'
+            
+            }
+        
+        
+        }
+    
+    
+    
+    
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
