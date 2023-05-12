@@ -1,0 +1,21 @@
+
+@Library('myLib') _
+pipeline{
+    agent any
+   
+    
+    stages{
+        stage('one'){
+           steps{
+               sayHello 'Shon!!'
+        
+           
+           }
+           
+           
+           }
+        
+        
+        
+        }
+  }  
