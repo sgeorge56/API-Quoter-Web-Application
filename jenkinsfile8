@@ -1,0 +1,49 @@
+pipeline{
+    agent any
+    environment{
+          fname = "Shon"
+    }
+    
+    stages{
+        stage('one'){
+           steps{
+           
+               script{
+                   if(env.fname == "Shon"){
+                        echo 'this is in the correct position'
+                   }
+                   else{
+                        echo 'You are not part of this branch'
+                   }
+            }
+           
+           }
+           
+           
+           }
+        
+        
+        
+        }
+  }  
+    
+    
+    
+    
+    
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
