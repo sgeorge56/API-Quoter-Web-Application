@@ -1,5 +1,5 @@
 
 
 def call(String name = 'human'){
-  echo name
+  echo 'Hello' name
 }
