@@ -2,6 +2,7 @@ pipeline{
     agent any
     environment{
          abc = 'Hello World'
+         def = 'pass'
     }
     
     stages{
@@ -9,8 +10,11 @@ pipeline{
         stage('one'){
         
             when {
-                 environment name: 'abc', value: 'Value'
             
+                 allof{
+                 environment name: 'def', value: 'pass'
+                 environment name: 'abc', value: 'Hello World'
+             }
             }
         
             steps{
