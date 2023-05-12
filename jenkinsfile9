@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage('one'){
            steps{
-               sayHello 'Shon!!'
+               hello 'Shon!!'
         
            
            }
