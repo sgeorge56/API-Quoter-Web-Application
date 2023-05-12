@@ -1,8 +1,9 @@
 pipeline {
-     agent {
-     label 'ubuntuNode1'
-     }
+     agent 'ubuntuNode1'
      stages {
+         agent{
+          docker { image 'node:18.16.0-alpine' }
+         }
          stage('pre-build') {
              steps{
                           echo 'this is inner 1'}
