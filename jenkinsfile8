@@ -10,7 +10,8 @@ pipeline{
            
                script{
                    try{
-                      sh 'abcefg'
+                      echo 'abcedfg'
+                      sh 'well no'
                    }
                    
                    catch(e){
